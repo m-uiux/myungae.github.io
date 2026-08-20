@@ -1,0 +1,492 @@
+/* ===== 기본 설정 ===== */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-border-light: #eeeeee;
+  --color-border-mid: #b2b2b2;
+  --color-muted: #999999;
+  --page-padding: 120px;
+  --section-gap: 180px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  color: var(--color-black);
+  background: var(--color-white);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 섹션 내 여러 자식 요소를 하나의 기준선으로 묶어 가운데 정렬하는 공용 래퍼 */
+.frame-1560 {
+  max-width: 1680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ===== 히어로 (00_1) ===== */
+.hero {
+  padding: clamp(48px, 10vw, 100px) var(--page-padding) clamp(32px, 6vw, 60px);
+}
+
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 510px;
+  margin-bottom: 120px;
+}
+
+.hero__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+  color: #b2b2b2;
+}
+
+.hero__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: clamp(56px, 9vw, 100px);
+  line-height: 1.3;
+}
+
+.hero__contact {
+  max-width: 1680px;
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.hero__contact-name {
+  min-width: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+}
+
+.hero__contact-role {
+  min-width: 0;
+  padding-left: 32px;
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
+  font-size: 16px;
+  letter-spacing: -0.16px;
+}
+
+.hero__contact-info {
+  min-width: 0;
+  padding-left: 32px;
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  line-height: 1.6;
+}
+
+/* ===== 핵심 역량 ===== */
+.strengths {
+  padding: 0 var(--page-padding) var(--section-gap);
+}
+
+.strengths__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.strength-card {
+  background: var(--color-white);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.strength-card:last-child {
+  border-right: none;
+}
+
+.strength-card__num {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+  color: #b2b2b2;
+  line-height: 1.6;
+  letter-spacing: -0.32px;
+}
+
+.strength-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.18px;
+}
+
+.strength-card__desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  letter-spacing: -0.16px;
+  flex: 1;
+}
+
+/* ===== 갤러리 (00_2) ===== */
+.gallery {
+  padding: 0 var(--page-padding) var(--section-gap);
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery__item__figure {
+  aspect-ratio: 3 / 2;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+.gallery__item__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.gallery__item a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.gallery__item a:hover .gallery__item__figure img {
+  transform: scale(1.04);
+}
+
+.gallery__item__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gallery__item__title {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.16px;
+}
+
+.gallery__item__tag {
+  font-size: 12px;
+  letter-spacing: 0.72px;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+/* ===== 소개 / 경력 / 학력 (#0_1) ===== */
+.about {
+  padding: 0 var(--page-padding) clamp(60px, 12vw, 220px);
+  display: flex;
+  flex-direction: column;
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.about__top {
+  max-width: 1680px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-top: var(--section-gap);
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.about__greeting {
+  font-weight: 100;
+  font-size: clamp(28px, 4vw, 54px);
+  line-height: 1.4;
+  letter-spacing: -1.08px;
+}
+
+.about__greeting strong {
+  font-weight: 500;
+}
+
+.about__tools {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.about__tools img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.about__columns {
+  max-width: 1680px;
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 200px;
+}
+
+.about__heading {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: -0.22px;
+  margin-bottom: 40px;
+}
+
+.about__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__divider {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin: 56px 0;
+}
+
+/* 경력 */
+.career-list {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  width: 100%;
+}
+
+.career-item {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.career-item--last {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.career-item__meta {
+  flex: 1 0 0;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  line-height: 1.6;
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  white-space: nowrap;
+}
+
+.career-item__company {
+  font-weight: 400;
+}
+
+.career-item__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.career-item__type {
+  color: var(--color-muted);
+}
+
+.career-item__desc {
+  flex: 1 0 0;
+  min-width: 160px;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+}
+
+/* 학력 */
+.edu-list,
+.award-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+}
+
+.edu-list {
+  gap: 12px;
+}
+
+.award-list {
+  gap: 16px;
+}
+
+.edu-row {
+  display: flex;
+  gap: 24px;
+}
+
+.edu-school {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.edu-major {
+  flex: 0 0 84px;
+}
+
+.edu-status {
+  flex: 0 0 40px;
+  white-space: nowrap;
+}
+
+.edu-year {
+  flex: 0 0 40px;
+  color: var(--color-border-mid);
+}
+
+.award-row {
+  display: flex;
+  gap: 24px;
+}
+
+.award-name {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.award-title {
+  flex: 0 0 148px;
+}
+
+.award-year {
+  flex: 0 0 40px;
+  color: var(--color-border-mid);
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 1024px) {
+  :root {
+    --page-padding: clamp(24px, 6vw, 120px);
+    --section-gap: clamp(24px, 12vw, 180px);
+  }
+
+  .about__columns {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .strengths__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .strength-card:nth-child(2n) {
+    border-right: none;
+  }
+
+  .strength-card:not(:nth-last-child(-n+2)) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__intro {
+    margin-bottom: 80px;
+  }
+
+  .hero__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero__contact-name,
+  .hero__contact-role,
+  .hero__contact-info {
+    width: 100%;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .strengths__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strength-card {
+    padding: 28px 24px;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  .strength-card:last-child {
+    border-bottom: none;
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .career-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .edu-row,
+  .award-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .edu-major,
+  .edu-status,
+  .edu-year,
+  .award-title,
+  .award-year {
+    flex: none;
+  }
+
+  .about {
+    gap: 80px;
+  }
+}

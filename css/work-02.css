@@ -1,0 +1,615 @@
+/* =====================================================
+   works/02.html 전용 스타일 (Figma 리디자인 반영)
+   node-id 102:733 기준, 이 페이지에서만 사용
+===================================================== */
+
+:root {
+  --d02-padding-tb: clamp(60px, 9vw, 120px);
+}
+
+.d02-section {
+  width: 100%;
+  padding: var(--d02-padding-tb) var(--page-padding) var(--page-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 현안→전략 / 퍼소나&여정 섹션 : 좌우 여백이 더 넓음(피그마 값 그대로) */
+.d02-wrap {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---------- 01. 인트로 ---------- */
+.d02-intro {
+  gap: 64px;
+}
+
+.d02-intro__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.d02-title {
+  flex: 1 0 320px;
+  font-weight: 100;
+  font-size: clamp(32px, 4.5vw, 54px);
+  line-height: 1.4;
+  letter-spacing: -1.08px;
+  color: #000;
+}
+
+.d02-meta {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.d02-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.d02-meta__label {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.72px;
+  color: #b2b2b2;
+}
+
+.d02-meta__value {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.72px;
+  color: #000;
+}
+
+.d02-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #333;
+}
+
+/* ---------- 공용 섹션 타이틀 ---------- */
+.d02-h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.48px;
+  color: #000;
+}
+
+/* ---------- 02. 현안 → 전략 ---------- */
+.d02-pair {
+  gap: 40px;
+}
+
+.d02-pair-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.d02-pair-row {
+  display: flex;
+  gap: 80px;
+  padding: 40px 0;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.d02-pair-num {
+  flex: 1 1 0;
+  min-width: 0;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 1.6;
+  letter-spacing: -0.32px;
+  color: #b2b2b2;
+}
+
+.d02-pair-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d02-pair-col__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.d02-tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  background: rgba(0, 0, 0, 0.07);
+  color: #666;
+}
+
+.d02-tag--solution {
+  background: #000;
+  color: #fff;
+}
+
+.d02-pair-heading {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #000;
+}
+
+.d02-pair-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+  color: #333;
+}
+
+/* ---------- 03. 퍼소나 & 여정 ---------- */
+.d02-persona {
+  gap: 40px;
+}
+
+.d02-persona-intro {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.d02-persona-intro img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.d02-persona-intro__text {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+}
+
+.d02-persona-intro__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #000;
+}
+
+.d02-persona-intro__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+  color: #333;
+}
+
+.d02-persona-tags {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.d02-persona-tag {
+  flex: 1 1 260px;
+  min-width: 0;
+  background: #f7f7f7;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d02-persona-tag__title {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.16px;
+  color: #000;
+}
+
+.d02-persona-tag__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+  color: #333;
+}
+
+.d02-persona-timeline {
+  width: 100%;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.d02-persona-timeline__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: -0.22px;
+  color: #000;
+}
+
+/* ---------- 타임라인 (03에서 공용) ---------- */
+.d02-timeline {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.d02-timeline::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-border-light);
+}
+
+.d02-timeline-step {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-right: 24px;
+}
+
+.d02-timeline-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.d02-timeline-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #000;
+}
+
+.d02-timeline-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+  color: #333;
+}
+
+/* ---------- 04~05. 하이라이트 ---------- */
+.d02-block {
+  gap: 60px;
+}
+
+.d02-block__head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.d02-block__top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d02-eyebrow {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  color: #999;
+}
+
+.d02-block__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.64px;
+  color: #000;
+}
+
+.d02-block__desc {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #333;
+}
+
+/* ---------- 06. 그 외 주요 화면 ---------- */
+.d02-feature-grid {
+  gap: 80px;
+}
+
+.d02-feature-row {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.d02-feature-card {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.d02-feature-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.d02-feature-card__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.18px;
+  color: #000;
+}
+
+.d02-feature-card__desc {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #333;
+}
+
+.d02-section:has(+ .d02-result) {
+  padding-bottom: var(--section-gap);
+}
+
+/* ---------- 07. 결과 ---------- */
+.d02-result {
+  width: 100%;
+  padding: 0 var(--page-padding) var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d02-result__eyebrow-row {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  padding-top: var(--page-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d02-result__eyebrow {
+  flex: 1 1 0;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  color: #999;
+}
+
+.d02-result__title {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: -0.28px;
+  color: #000;
+}
+
+.d02-result__checklist {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 80px;
+}
+
+.d02-result__item {
+  flex: 1 1 200px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.d02-result__num {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.14px;
+  color: #b2b2b2;
+}
+
+.d02-result__label {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.18px;
+  color: #000;
+}
+
+/* ---------- 이미지 자리 (실제 <img> 삽입, 폭은 피그마 지정값으로 고정 — 2배수 이미지 업로드 시 선명하게 표시) ---------- */
+.d02-figure {
+  width: 100%;
+  min-height: 120px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+}
+
+.d02-figure__img {
+  width: var(--fig-w, 100%);
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 지정한 파일이 아직 없으면(404) 이미지 대신 배경(회색 박스)만 보이도록 숨김 */
+.d02-figure__img--missing {
+  display: none;
+}
+
+/* ---------- 이 페이지에서 쓰는 close-btn 색상 보정 (#000 → #333) ---------- */
+.d02-close-btn,
+.d02-close-btn .close-btn__line {
+  border-color: #333;
+}
+
+.d02-close-btn .close-btn__line {
+  background: #333;
+}
+
+.d02-close-btn:hover {
+  background: #333;
+}
+
+.d02-close-btn:hover .close-btn__line {
+  background: var(--color-white);
+}
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 1024px) {
+  .d02-pair-row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .d02-pair-num {
+    flex-basis: 100%;
+  }
+
+  .d02-pair-col {
+    flex-basis: calc(50% - 8px);
+  }
+
+  .d02-result__checklist {
+    gap: 32px 24px;
+  }
+
+  .d02-result__item {
+    flex-basis: calc(50% - 12px);
+  }
+
+  .d02-feature-row {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .d02-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .d02-intro {
+    gap: 40px;
+  }
+
+  .d02-meta {
+    gap: 24px;
+  }
+
+  .d02-pair-col {
+    flex-basis: 100%;
+  }
+
+  .d02-persona-intro {
+    gap: 16px;
+  }
+
+  .d02-persona-tags {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .d02-persona-tag {
+    flex-basis: auto;
+    padding: 20px;
+  }
+
+  .d02-timeline {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .d02-timeline::before {
+    display: none;
+  }
+
+  .d02-timeline-step {
+    padding-right: 0;
+  }
+
+  .d02-block {
+    gap: 32px;
+  }
+
+  .d02-block__title {
+    font-size: 24px;
+  }
+
+  .d02-feature-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .d02-feature-card {
+    flex-basis: auto;
+  }
+
+  .d02-result {
+    padding-bottom: 80px;
+  }
+
+  .d02-result__title {
+    font-size: 22px;
+  }
+
+  .d02-result__checklist {
+    padding-top: 48px;
+  }
+
+  .d02-result__item {
+    flex-basis: 100%;
+  }
+}

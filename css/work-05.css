@@ -1,0 +1,481 @@
+/* =====================================================
+   works/05.html 전용 스타일 (Figma 리디자인 반영)
+   node-id 116:45 기준, 이 페이지에서만 사용
+   다른 페이지와 달리 "현안→전략/퍼소나&여정" 구조가 아닌
+   캐릭터 개발 프로세스(Step 1~4) 케이스 스터디 구조를 사용
+===================================================== */
+
+:root {
+  --d05-padding-tb: clamp(60px, 9vw, 120px);
+}
+
+.d05-section {
+  width: 100%;
+  padding: var(--d05-padding-tb) var(--page-padding) var(--page-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.d05-wrap {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---------- 01. 인트로 ---------- */
+.d05-intro {
+  gap: 64px;
+  align-items: center;
+}
+
+.d05-intro__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.d05-title {
+  flex: 1 0 320px;
+  font-weight: 100;
+  font-size: clamp(32px, 4.5vw, 54px);
+  line-height: 1.4;
+  letter-spacing: -1.08px;
+  color: #000;
+}
+
+.d05-meta {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.d05-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.d05-meta__label {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.72px;
+  color: #b2b2b2;
+}
+
+.d05-meta__value {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.72px;
+  color: #000;
+}
+
+.d05-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #333;
+}
+
+/* ---------- 공용 섹션 타이틀 ---------- */
+.d05-h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.48px;
+  color: #000;
+}
+
+/* ---------- 이미지 자리 (실제 <img> 삽입, 캡션/구성까지 포함한 통이미지 — 폭은 피그마 프레임 지정값으로 고정) ---------- */
+.d05-figure {
+  width: 100%;
+  min-height: 120px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+}
+
+.d05-figure__img {
+  width: var(--fig-w, 100%);
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 지정한 파일이 아직 없으면(404) 이미지 대신 배경(플레이스홀더 박스)만 보이도록 숨김 */
+.d05-figure__img--missing {
+  display: none;
+}
+
+/* ---------- 왜, 캐릭터가 필요했나 ---------- */
+.d05-why {
+  gap: 40px;
+}
+
+.d05-why-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.d05-why-item {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.d05-why-item__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.18px;
+  color: #000;
+}
+
+.d05-why-item__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #333;
+}
+
+/* ---------- 퍼소나 (한국어를 배우는 외국인 응시자) ---------- */
+.d05-persona {
+  gap: 60px;
+}
+
+.d05-persona-group {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.d05-persona-intro {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.d05-persona-intro img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.d05-persona-intro__text {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.d05-persona-intro__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #000;
+}
+
+.d05-persona-intro__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+  color: #333;
+}
+
+.d05-persona-tags {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.d05-persona-tag {
+  flex: 1 1 260px;
+  min-width: 0;
+  background: #f7f7f7;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d05-persona-tag__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #000;
+}
+
+.d05-persona-tag__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+  color: #333;
+}
+
+/* ---------- Step 섹션 (Step 1개 = 섹션 1개, 피그마와 동일하게 분리) ---------- */
+/* Step 02~04: 기본 .d05-section 패딩(120 위 / 180 아래)을 그대로 사용, gap만 60으로 축소 */
+.d05-step-section {
+  gap: 60px;
+}
+
+/* Step 01만 예외: 위/아래 패딩이 대칭(120/120) — 뒤에 이미지가 바로 안 붙기 때문 */
+.d05-step-section--first {
+  padding-bottom: var(--d05-padding-tb);
+}
+
+.d05-step-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.d05-step-block__head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d05-step-block__eyebrow {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  color: #999;
+}
+
+.d05-step-block__title {
+  width: 100%;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.64px;
+  color: #000;
+}
+
+.d05-step-rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.d05-step-row {
+  width: 100%;
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+  display: flex;
+  gap: 0 40px;
+  flex-wrap: wrap;
+}
+
+.d05-step-row__label {
+  flex: 0 0 200px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #000;
+}
+
+.d05-step-row__desc {
+  flex: 1 1 240px;
+  min-width: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.16px;
+  color: #333;
+}
+
+.d05-step-row__desc strong {
+  font-weight: 600;
+}
+
+.d05-section:has(+ .d05-result) {
+  padding-bottom: var(--section-gap);
+}
+
+/* ---------- 결과 ---------- */
+.d05-result {
+  width: 100%;
+  padding: 0 var(--page-padding) var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.d05-result__eyebrow-row {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  padding-top: var(--page-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d05-result__eyebrow {
+  flex: 1 1 0;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  color: #999;
+}
+
+.d05-result__title {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: -0.28px;
+  color: #000;
+}
+
+.d05-result__checklist {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 80px;
+}
+
+.d05-result__item {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.d05-result__num {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.14px;
+  color: #b2b2b2;
+}
+
+.d05-result__label {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.18px;
+  color: #000;
+}
+
+/* ---------- 이 페이지에서 쓰는 close-btn 색상 보정 (#000 → #333) ---------- */
+.d05-close-btn,
+.d05-close-btn .close-btn__line {
+  border-color: #333;
+}
+
+.d05-close-btn .close-btn__line {
+  background: #333;
+}
+
+.d05-close-btn:hover {
+  background: #333;
+}
+
+.d05-close-btn:hover .close-btn__line {
+  background: var(--color-white);
+}
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 1024px) {
+  .d05-step-row__label {
+    flex-basis: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .d05-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .d05-intro {
+    gap: 40px;
+  }
+
+  .d05-meta {
+    gap: 24px;
+  }
+
+  .d05-persona {
+    gap: 24px;
+  }
+
+  .d05-persona-intro {
+    gap: 16px;
+  }
+
+  .d05-persona-tags {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .d05-persona-tag {
+    flex-basis: auto;
+    padding: 20px;
+  }
+
+  .d05-why-grid {
+    gap: 24px;
+  }
+
+  .d05-step-section {
+    gap: 32px;
+  }
+
+  .d05-step-block {
+    gap: 32px;
+  }
+
+  .d05-step-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .d05-step-row__label {
+    flex: 0 0 auto;
+    font-weight: 600;
+  }
+
+  .d05-step-row__desc {
+    flex-basis: auto;
+  }
+
+  .d05-step-block__title {
+    font-size: 24px;
+  }
+
+  .d05-result {
+    padding-bottom: 80px;
+  }
+
+  .d05-result__title {
+    font-size: 22px;
+  }
+
+  .d05-result__checklist {
+    padding-top: 48px;
+  }
+}
