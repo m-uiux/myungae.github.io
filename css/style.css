@@ -6,7 +6,7 @@
   --color-border-mid: #b2b2b2;
   --color-muted: #999999;
   --page-padding: 120px;
-  --section-gap: 180px;
+  --section-gap: 240px;
 }
 
 * {
@@ -42,7 +42,7 @@ img {
 
 /* ===== 히어로 (00_1) ===== */
 .hero {
-  padding: clamp(48px, 10vw, 100px) var(--page-padding) clamp(32px, 6vw, 60px);
+  padding: clamp(48px, 10vw, 100px) var(--page-padding);
 }
 
 .hero__intro {
@@ -50,7 +50,7 @@ img {
   flex-direction: column;
   gap: 40px;
   max-width: 510px;
-  margin-bottom: 120px;
+  margin-bottom: 40px;
 }
 
 .hero__label {
@@ -69,38 +69,25 @@ img {
 }
 
 .hero__contact {
-  max-width: 1680px;
-  width: 100%;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  display: flex;
   align-items: center;
-  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.hero__contact-name {
-  min-width: 0;
+.hero__contact-cell {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: -0.16px;
+  white-space: nowrap;
 }
 
-.hero__contact-role {
-  min-width: 0;
-  padding-left: 32px;
-  border-left: 1px solid rgba(0, 0, 0, 0.07);
-  font-size: 16px;
-  letter-spacing: -0.16px;
-}
-
-.hero__contact-info {
-  min-width: 0;
-  padding-left: 32px;
-  border-left: 1px solid rgba(0, 0, 0, 0.07);
-  font-size: 16px;
-  letter-spacing: -0.16px;
-  line-height: 1.6;
+.hero__contact-divider {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.16);
 }
 
 /* ===== 핵심 역량 ===== */
@@ -111,7 +98,8 @@ img {
 .strengths__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 .strength-card {
@@ -121,6 +109,11 @@ img {
   flex-direction: column;
   gap: 16px;
   border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.strength-card:first-child {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .strength-card:last-child {
@@ -233,8 +226,6 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  padding-top: var(--section-gap);
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 .about__greeting {
@@ -407,7 +398,7 @@ img {
 @media (max-width: 1024px) {
   :root {
     --page-padding: clamp(24px, 6vw, 120px);
-    --section-gap: clamp(24px, 12vw, 180px);
+    --section-gap: clamp(24px, 12vw, 220px);
   }
 
   .about__columns {
@@ -417,6 +408,11 @@ img {
 
   .strengths__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .strength-card:first-child {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .strength-card:nth-child(2n) {
@@ -429,30 +425,12 @@ img {
 }
 
 @media (max-width: 768px) {
-  .hero__intro {
-    margin-bottom: 80px;
-  }
-
-  .hero__contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  .hero__contact-name,
-  .hero__contact-role,
-  .hero__contact-info {
-    width: 100%;
-    padding-left: 0;
-    border-left: none;
-  }
-
   .strengths__grid {
     grid-template-columns: 1fr;
   }
 
-  .strength-card {
+  .strength-card,
+  .strength-card:first-child {
     padding: 28px 24px;
     border-right: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.07);
